@@ -1,6 +1,7 @@
 import React from "react";
 
 import Ball from "./../ball/ball";
+
 import "./cell.css";
 
 const animate = (pop, setpopping) => {
@@ -14,6 +15,7 @@ const animate = (pop, setpopping) => {
 export default React.memo(function Cell(props) {
 	const [popping, setpopping] = React.useState(false);
 	const ball = props.popper === 1 ? "ball" : "ball-2";
+	const theme = props.popper === 1 ? "border-red-600" : "border-blue-600";
 	return (
 		<>
 			<div
@@ -22,7 +24,7 @@ export default React.memo(function Cell(props) {
 						? animate(props.tap, setpopping)
 						: props.tap()
 				}
-				className='cell bg-white w-20 h-16 border border-primary/50 rounded  shadow-[10px_10px_10px_-5px_rgba(100,20,200,1)] overflow-hidden sm:hover:scale-95 hover:shadow-none'>
+				className={`cell ${theme} transition-all duration-1000 bg-white w-20 h-16 border-4 rounded  shadow-[10px_10px_10px_-5px_rgba(100,20,200,1)] overflow-hidden sm:hover:scale-95 hover:shadow-none`}>
 				{popping ? (
 					<div>
 						<div className='relative animate-ping scale-25'>
