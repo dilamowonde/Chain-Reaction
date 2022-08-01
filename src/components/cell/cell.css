@@ -1,0 +1,14 @@
+.ball {
+   background: black;
+   border-radius: 50%;
+   height: 25px;
+   width: 25px;
+   background: radial-gradient(circle at 10px 10px, #ff5c5c, #000);
+ }
+ .ball-2 {
+   background: black;
+   border-radius: 50%;
+   height: 25px;
+   width: 25px;
+   background: radial-gradient(circle at 10px 10px, #5cabff, #000);
+ }
